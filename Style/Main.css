@@ -1,1 +1,51 @@
-/*Style of navigation and footer */
+body{
+  margin: 0;
+}
+
+header {
+  background-image: url('../Images/back-ground.jfif');
+  background-repeat: no-repeat;
+  height: 550px;
+  background-size: 1290px ;
+  background-attachment: fixed;
+  background-position: center;
+}
+.section-hero {
+  min-height: 400px;
+  width: 67%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+ }
+.hero-title {
+  font-size: 3rem;
+  color: #333;
+  margin-top: -70px;
+}
+.hero-title  span {
+  color: #75A47F;
+}
+.text p {
+  padding-bottom: 20px;
+  color: #352F44;
+}
+.btn-primary {
+  display: flex;
+  align-items: center;
+  background-color: #75A47F;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #4a7b4f;
+}
+
+ion-icon {
+  padding-left: 10px;
+  font-size: 1.5rem;
+} 
