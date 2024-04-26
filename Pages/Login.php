@@ -5,15 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Style/Login.css">
-    <title>Document</title>
+    <title>LogIn Page</title>
 </head>
-<body>
-    <form>
-        <label for=""></label>
-        <input type="text">
-        <label for=""></label>
-        <input type="password">
-        <input type="submit" value="Login">
-    </form>
-</body>
+  <body>
+    <div class="login-box">
+      <h1>Login</h1>
+        <form>
+          <label>Email</label>
+          <input type="email" placeholder="" />
+          <label>Password</label>
+          <input type="password" placeholder="" />
+          <input type="button" class="b" value="Submit  " />
+       </form>
+    </div>
+    <p class="para-2">
+      Not have an account? <a href="Signup.php">Sign Up Here</a>
+    </p>
+  </body>
 </html>
