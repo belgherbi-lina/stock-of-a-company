@@ -3,20 +3,20 @@
     padding: 0;
 }
 body {
-    background-image: url('95zut425.png');
+    background-image: url('../Images/95zut425.png');
     background-color: #627c57c4;
-    background-size:contain ;
+    background-size: cover ;
     background-repeat: no-repeat;
     background-size: auto;
-    height: 100vh;
+    max-height: 100vh;
     font-family: "Roboto", sans-serif;
     
   }
   
   .signup-box {
     width: 400px;
-    height: 600px;
-    margin-top: 70px;
+    height: 550px;
+    margin-top: 15px;
     background-color: rgb(241, 240, 238);
     border-radius: 10px;
     margin-left: 60%;
@@ -25,10 +25,9 @@ body {
   }
   
   .login-box {
-    
     width: 400px;
     height: 300px;
-    margin-top: 220px;
+    margin-top: 150px;
     border-radius: 10px;
     background-color: rgb(241, 240, 238);
     margin-left: 60%;
@@ -64,7 +63,7 @@ body {
     border-radius: 6px;
     outline: none;
   }
-  input[type="button"] {
+  input[type="submit"] {
     width: 320px;
     height: 35px;
     margin-top: 20px;
@@ -72,6 +71,7 @@ body {
     background-color: #567748c4;
     color: white;
     font-size: 18px;
+    cursor: pointer;
   }
   .b:hover{
     background-color: #045029;

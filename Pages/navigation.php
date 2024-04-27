@@ -1,10 +1,20 @@
+<?php
+    $username = "";
+
+    if (isset($_SESSION['pseudo']) && $_SESSION['pseudo'] != "root") {
+        $username = $_SESSION['pseudo'];
+    } else {
+        $username = "Login";
+    }
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./Style/Navigation.css">
-    <title>Document</title>
+    <title>Nav Bar</title>
 </head>
 <body>
     <div class="container">
@@ -12,7 +22,7 @@
         <a href="#" class="logo"><img src="./Images/Skin_Care_Logo.png" alt=""></a>
             <ul class="navbar-list">
               <li class="navbar-item">
-                <a href="#" class="navbar-link">Home</a>
+                <a href="../index.php" class="navbar-link">Home</a>
               </li>
               <li class="navbar-item">
                 <a href="#" class="navbar-link">About</a>
@@ -37,13 +47,28 @@
                   <span class="nav-action-text">Search</span>
                 </button>
               </li>
+              <?php if ($username != "Login") : ?>
+                    <li>
+                        <a href="#" class="nav-action-btn">
+                            <span class="nav-action-text"><?= $username ?></span>
+                        </a>
+                    </li>
+                <?php else : ?>
+                    <li>
+                        <a href="./Pages/Login.php" class="nav-action-btn">
+                            <ion-icon name="person-outline"></ion-icon>
+                            <span class="nav-action-text">Log In</span>
+                        </a>
+                    </li>
+                <?php endif; ?>
+                <?php if($username == "Admin") : ?>
+                  <li>
+                  <a  href="./Pages/admin-dashboard.php" class="nav-action-btn">
+                  <ion-icon name="settings-outline"></ion-icon></ion-icon>
+                  </a>
+              </li>
+              <?php else : ?>
               <li>
-                <a href="./Pages/Signup.php" class="nav-action-btn" >
-                  <ion-icon name="person-outline"></ion-icon>
-                  <span class="nav-action-text">Signup</span>
-                </a>
-            </li>
-            <li>
                 <button class="nav-action-btn">
                   <ion-icon name="heart-outline" aria-hidden="false"></ion-icon>
                 </button>
@@ -53,6 +78,16 @@
                   <ion-icon name="bag-outline" aria-hidden="true"></ion-icon>
                 </button>
               </li>
+              <?php endif; ?>
+              <?php if ($username != "Login") : ?>
+                    <li>
+                        <a href="./Pages/logout.php" class="nav-action-btn">
+
+                            <span class="nav-action-text">Logout</span>
+                            <ion-icon name="log-out-outline"></ion-icon>
+                        </a>
+                    </li>
+                <?php endif; ?>
             </ul>
         
         </nav>
