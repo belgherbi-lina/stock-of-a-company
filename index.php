@@ -19,11 +19,11 @@ session_start();
             <div class="text">
             <h2 class="hero-title">The Organic Store <span>Skin Care</span></h2>
             <p>we know that washing your face is the most important part of any skincare routine ,but we all use different products to get the job</p>
-            <button class="btn-primary">
+            <a href="products.php" class="btn-primary">
 
                     <span>Shop Now</span>
                     <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
-            </button>
+            </a>
             </div>
         </section>
     </header>
@@ -50,7 +50,7 @@ session_start();
     </div>
     </section>
 
-    <section class="about-us">
+    <section id="about" class="about-us">
         <div class="about-img">
         <img src="./Images/skin-model.jfif" alt="" >
         </div>

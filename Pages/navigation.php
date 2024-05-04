@@ -14,7 +14,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./Style/Navigation.css">
-    <title>Nav Bar</title>
+    <title></title>
 </head>
 <body>
     <div class="container">
@@ -22,13 +22,13 @@
         <a href="#" class="logo"><img src="./Images/Skin_Care_Logo.png" alt=""></a>
             <ul class="navbar-list">
               <li class="navbar-item">
-                <a href="../index.php" class="navbar-link">Home</a>
+                <a href="./index.php" class="navbar-link">Home</a>
               </li>
               <li class="navbar-item">
-                <a href="#" class="navbar-link">About</a>
+                <a href="#about" class="navbar-link">About</a>
               </li>
               <li class="navbar-item">
-                <a href="#" class="navbar-link">Products</a>
+                <a href="./products.php" class="navbar-link">Products</a>
               </li>
               <li class="navbar-item">
                 <a href="#" class="navbar-link">Shop</a>
@@ -37,7 +37,7 @@
                 <a href="#" class="navbar-link">Blog</a>
               </li>
               <li class="navbar-item">
-                <a href="#" class="navbar-link">Contact</a>
+                <a href="#contact" class="navbar-link">Contact</a>
               </li>
             </ul>
             <ul class="nav-action-list">
@@ -63,10 +63,15 @@
                 <?php endif; ?>
                 <?php if($username == "Admin") : ?>
                   <li>
-                  <a  href="./Pages/admin-dashboard.php" class="nav-action-btn">
-                  <ion-icon name="settings-outline"></ion-icon></ion-icon>
+                  <a  href="./admin-dashboard.php" class="nav-action-btn">
+                  <ion-icon name="settings-outline"></ion-icon>
                   </a>
-              </li>
+                </li>
+                <li>
+                  <a  href="./Pages/add-product.php" class="nav-action-btn">
+                  <ion-icon name="add-circle-outline"></ion-icon>
+                  </a>
+                </li>
               <?php else : ?>
               <li>
                 <button class="nav-action-btn">

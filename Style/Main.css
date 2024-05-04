@@ -30,14 +30,15 @@ header {
 }
 .btn-primary {
   display: flex;
-  align-items: center;
   background-color: #75A47F;
   color: #fff;
-  padding: 10px 20px;
+  padding: 10px 8px 10px 20px;
   border: none;
   border-radius: 30px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  width: 20%;
+  text-decoration: none;
 }
 
 .btn-primary:hover {
@@ -45,8 +46,9 @@ header {
 }
 
 ion-icon {
-  padding-left: 10px;
-  font-size: 1.5rem;
+  padding-top: 2px;
+  padding-left: 6px;
+  font-size: 1rem;
 } 
 
 .benefits h2 {

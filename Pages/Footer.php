@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <footer class="footer">
+    <footer id="contact" class="footer">
 
 <div class="footer-top">
   <div class="container-footer">

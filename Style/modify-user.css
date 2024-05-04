@@ -1,0 +1,49 @@
+
+h1{
+    text-align: center;
+}
+
+form {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(10px);
+    padding : 5px;
+    padding-left: 4%;
+    margin-left: 35%;
+    width: 350px;
+    border-radius: 30px;
+}
+  
+form label  {
+    display: flex;
+    margin: 20px;
+    font-size: 18px;
+  }
+  form textarea {
+    display: flex;
+    font-size: 10px;
+    width: 200px;
+    border-radius: 10px;
+    background-color: #d7daca;
+  }
+  
+  form input {
+    background-color: #d7daca;
+    width: 70%;
+    padding: 7px;
+    border: 1px solid #131419;
+    border-radius: 6px;
+  }
+  button[type="submit"] {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 270px;
+    height: 40px;
+    border: none;
+    background-color: #567748c4;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+
