@@ -1,24 +1,14 @@
 <?php
 session_start();
 
-// Database connection
-$server = "localhost";
-$username = "root";
-$password = "";
-$dbname = "website";
-
-// Create connection
-$conn = new mysqli($server, $username, $password, $dbname);
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+// Include the database connection file
+include 'DataBase.php';
 
 // SQL query to select all products
 $sql = "SELECT * FROM products";
-$result = $conn->query($sql);
-
+$stmt = $db->prepare($sql);
+$stmt->execute();
+$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 ?>
 <!DOCTYPE html>
@@ -37,16 +27,11 @@ $result = $conn->query($sql);
         <div class="products">
             <?php
             // Check if there are any products
-            if ($result->num_rows > 0) {
-                // Output data of each row using while loop
-                while ($row = $result->fetch_assoc()) {
+            if ($stmt->rowCount() > 0) {
+                // Output data of each row using foreach loop
+                foreach ($result as $row) {
                     echo '<div class="product-card">';
-                    if (!empty($row["image"])) {
-                        $imageData = base64_encode($row["image"]);
-                        echo '<img src="data:image/jpeg;base64,' . $imageData . '">';
-                    } else {
-                        echo '<img src="placeholder-image.jpg" alt="Placeholder Image">';
-                    }
+                    echo '<img src="data:image/jpeg;base64,' . base64_encode($row["image"]) . '" alt="' . $row["name"] . '">';
                     echo '<h2>' . $row["name"] . '</h2>';
                     echo '<p>$' . $row["price"] . '</p>';
                     echo '<p>' . $row["description"] . '</p>';
@@ -73,5 +58,5 @@ $result = $conn->query($sql);
 </html>
 <?php
 // Close connection
-$conn->close();
+$con = null;
 ?>

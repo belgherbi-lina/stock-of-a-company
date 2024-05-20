@@ -4,7 +4,6 @@ body {
     padding: 0;
     background-image: url('../Images/95zut425.png');
     background-repeat: no-repeat;
-    width: 100%;
     border-radius: 10px;
     background-color: #839c7c;
     margin-left: 30%;
@@ -13,10 +12,12 @@ body {
 }
 h2{
     text-align: center;
+    padding-left: 35%;
+
 }
 
 form {
-    margin-left: 35%;
+    margin-left: 50%;
     width: 300px;
 }
   
