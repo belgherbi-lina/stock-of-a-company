@@ -58,7 +58,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           <input type="email" id="email" name="email" required/>
           <label>Password</label>
           <input type="password" id="password" name="password" required />
-          <input type="submit" class="b" value="Submit  " />
+          <input type="submit" class="b" value="Submit" />
        </form>
        <?php
         if (isset($error)) {

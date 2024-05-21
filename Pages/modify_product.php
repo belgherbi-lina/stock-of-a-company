@@ -16,11 +16,12 @@ if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_SESSION['pseudo']) && $_SESSI
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../Style/modify-product.css">
+    <link rel="stylesheet" href="../Style/up.css">
     <title>Modify Product</title>
 </head>
 <body>
-    <h2>Modify Product</h2>
+  <div class="modify-box">
+    <br><h1>Modify Product</h1><br>
     <?php
     // Check if product ID is provided
     if (isset($_GET['product_id'])) {
@@ -30,13 +31,15 @@ if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_SESSION['pseudo']) && $_SESSI
         // Display product details in the form
         echo '<form action="update_product.php" method="post">';
         echo '<input type="hidden" name="product_id" value="' . $product_id . '">';
-        echo 'New Name: <input type="text" name="new_name"><br>';
-        echo 'New Price: <input type="text" name="new_price"><br>';
-        echo '<input type="submit" value="Update Product">';
+        echo 'New Name: <input type="text" name="new_name"><br><br>';
+        echo 'New Price: <input type="text" name="new_price"><br><br>';
+        echo 'New Description: <input type="text" name="new_description"><br><br>';
+        echo '<input type="submit" class="b" value="Update Product">';
         echo '</form>';
     } else {
         echo "Product ID not provided.";
     }
     ?>
+    </div>
 </body>
 </html>

@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color:  #d1e1d1; 
+    background-color:  #adcab2; 
 }
 
 .container {
@@ -55,7 +55,7 @@ h1 {
 }
 
 .product-card button {
-    background-color: #ff0000;
+    background-color: #75a47f;
     color: #fff;
     border: none;
     padding: 5px 10px;
@@ -64,5 +64,5 @@ h1 {
 }
 
 .product-card button:hover {
-    background-color: #cc0000;
+    background-color: #034d19;
 }

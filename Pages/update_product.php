@@ -19,12 +19,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $product_id = $_POST['product_id'];
     $new_name = $_POST['new_name'];
     $new_price = $_POST['new_price'];
-
-    if(!$new_name ){
+    $new_description = $_POST['new_description'];
+    if(!$new_name && !$new_description ){
         $sql = "UPDATE products SET price='$new_price' WHERE id=$product_id";
        // Prepare SQL statement to update product attributes
-    }else {
+    }else if(!$new_description) {
         $sql = "UPDATE products SET name='$new_name' WHERE id=$product_id";
+    }else {
+        $sql = "UPDATE products SET name='$new_description' WHERE id=$product_id";
     }
     // Execute the SQL statement
     if ($conn->query($sql) === TRUE) {

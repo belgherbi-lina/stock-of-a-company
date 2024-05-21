@@ -31,21 +31,23 @@ if (isset($_POST['upload'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../Style/add-product.css">
+    <link rel="stylesheet" href="../Style/addproduct.css">
     <title>Upload Product</title>
 </head>
 <body>
+  <div class="add-box">
     <h2>Upload a Product</h2>
     <form action="add-product.php" method="post" enctype="multipart/form-data">
         <label for="name">Product Name:</label><br>
-        <input type="text" id="name" name="name" placeholder="name"><br><br>
+        <input type="text" id="name" name="name" placeholder="name"><br>
         <label for="image">Product Image:</label><br>
-        <input type="file" id="image" name="image"><br><br>
+        <input type="file" id="image" name="image"><br>
         <label for="price">Product Price:</label><br>
-        <input type="text" id="price" name="price" placeholder="$price"><br><br>
+        <input type="text" id="price" name="price" placeholder="$price"><br>
         <label for="description">Product Description:</label><br>
-        <textarea id="description" name="description" placeholder="description"></textarea><br><br>
-        <input type="submit" name="upload" value="Upload">
+        <textarea id="description" name="description" placeholder="description"></textarea><br>
+        <input type="submit" name="upload" class="b" value="Upload">
     </form>
+  </div>
 </body>
 </html>
